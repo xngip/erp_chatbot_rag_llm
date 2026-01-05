@@ -12,3 +12,7 @@ sentence-transformers
 pypdf
 chromadb
 google-generativeai
+google-genai
+langchain-google-genai
+pydantic
+#python -m uvicorn app.main:app --reload

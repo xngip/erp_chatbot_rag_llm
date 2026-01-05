@@ -3,7 +3,6 @@
 import sys
 import os
 
-# --- Thêm đường dẫn dự án vào sys.path (Để chạy) ---
 # Thao tác này giúp Python tìm thấy thư mục 'app'
 project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.append(project_root)

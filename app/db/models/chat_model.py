@@ -1,5 +1,4 @@
 # app/db/models/chat_model.py
-
 from sqlalchemy import Column, Integer, Text, DateTime, String, Index
 from sqlalchemy.sql import func
 

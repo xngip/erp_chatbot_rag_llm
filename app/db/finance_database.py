@@ -1,20 +1,17 @@
-# app/db/database.py
+# app/db/finance_database.py
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, declarative_base
 from app.config import settings
 
-# ===== DATABASE CHATBOT =====
-DATABASE_URL = settings.DATABASE_URL
-
 engine = create_engine(
-    DATABASE_URL,
-    echo=False
+    settings.FINANCE_DATABASE_URL,
+    echo=True 
 )
 
-SessionLocal = sessionmaker(
+FinanceSessionLocal = sessionmaker(
     autocommit=False,
     autoflush=False,
     bind=engine
 )
 
-Base = declarative_base()
+FinanceBase = declarative_base()

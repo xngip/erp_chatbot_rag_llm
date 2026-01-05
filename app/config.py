@@ -11,10 +11,14 @@ env_path = os.path.join(project_root, ".env")
 
 class Settings(BaseSettings):
     DATABASE_URL: str
-    PGVECTOR_DIM: int = 1024
     
-    # THÊM DÒNG NÀY:
     GOOGLE_API_KEY: str
+
+    SALE_CRM_DATABASE_URL: str
+
+    FINANCE_DATABASE_URL: str
+
+    HRM_DATABASE_URL: str
 
     model_config = SettingsConfigDict(env_file=env_path)
 

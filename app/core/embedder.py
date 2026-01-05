@@ -17,7 +17,7 @@ def get_embedding_model():
     # và 'normalize_embeddings=True' để có hiệu suất tốt nhất
     model = SentenceTransformer(
         MODEL_NAME,
-        device="cpu"  # Dùng 'cuda' nếu bạn có GPU
+        device="cuda"  # Dùng 'cuda' nếu bạn có GPU
     )
     
     print("Tải mô hình thành công.")
