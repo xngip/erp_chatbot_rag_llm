@@ -13,7 +13,7 @@ from app.erp_tools.router.hrm_router import hrm_router
 # CONFIG LLM
 # =============================
 genai.configure(api_key=settings.GOOGLE_API_KEY)
-llm = genai.GenerativeModel("gemini-2.5-flash")
+llm = genai.GenerativeModel("gemini-2.5-flash-lite")
 
 # =============================
 # HRM CONTROL PROMPT
@@ -69,7 +69,7 @@ def handle_chat_hrm(request: ChatRequest) -> ChatResponse:
             answer = llm.generate_content(
                 prompt,
                 generation_config=genai.types.GenerationConfig(
-                    temperature=0.05
+                    temperature=0.1
                 )
             ).text
 

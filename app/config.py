@@ -20,6 +20,8 @@ class Settings(BaseSettings):
 
     HRM_DATABASE_URL: str
 
+    SUPPLY_CHAIN_DATABASE_URL: str
+
     model_config = SettingsConfigDict(env_file=env_path)
 
 # Tạo một đối tượng 'settings' duy nhất

@@ -57,7 +57,7 @@ Trả lời bằng tiếng Việt.
         answer = llm.generate_content(
             prompt,
             generation_config=genai.types.GenerationConfig(
-                temperature=0.3
+                temperature=0.2
             )
         ).text
 
